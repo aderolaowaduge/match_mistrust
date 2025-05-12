@@ -1,7 +1,10 @@
 /* src/components/Navbar.css */
+@import "tailwindcss";
+
 .navbar {
-  background-color: #f6f1eb; /* cream or light terracotta */
+  background-color: #391b19;
   padding: 1rem;
+  color: #fff3e7;
 }
 
 .nav-list {
@@ -10,11 +13,8 @@
   gap: 1.5rem;
 }
 
-.nav-list li {
+.nav-list {
   font-weight: bold;
+  color: #fff3e7;
 }
 
-.active-link {
-  color: #9c4f3c; /* dusty rose or dark brown */
-  border-bottom: 2px solid #9c4f3c;
-}

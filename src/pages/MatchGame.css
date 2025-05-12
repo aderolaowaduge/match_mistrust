@@ -5,18 +5,19 @@
   
   body {
     margin: 0;
-    background: url(assets/img/background.png);
+    background: url(../assets/img/background.png);
     background-position: center;
     background-size: cover;
     color: #391b19;
     font-family: "Kanit", sans-serif;
-    text-shadow: 2px 2px 3px #fff3e7;
     min-height: 100vh;
   }
   
   h1 {
     font-size: 60px;
     text-align: center;
+    color: #391b19;
+    text-shadow: 2px 2px 3px #fff3e7;
   }
   
   #ui-container {
@@ -28,6 +29,7 @@
     display: inline-block;
     font-size: 40px;
     text-align: center;
+    text-shadow: 2px 2px 3px #fff3e7;
   }
   
   #ui-container h3:first-child {

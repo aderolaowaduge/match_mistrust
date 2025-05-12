@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Game from '../components/Game';
-import '../style.css';
+import './MatchGame.css';
 
 function MatchGame() {
   const [gameStarted, setGameStarted] = useState(false);

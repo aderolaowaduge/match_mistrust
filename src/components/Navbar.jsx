@@ -1,7 +1,7 @@
 // src/components/Navbar.jsx
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import './Navbar.css'; // Optional: add styles here or use Tailwind/CSS modules
+import './output.css';
 
 function Navbar() {
   return (
