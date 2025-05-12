@@ -14,27 +14,27 @@ function Game() {
 
   // Setup game once
   useEffect(() => {
-  // Move createCardObjects inside useEffect
-  function createCardObjects() {
-    const imageClasses = shuffleCardImageClasses();
-    return imageClasses.map((imgClass, idx) => ({
-      id: idx,
-      imageClass: imgClass,
-      isFlipped: false,
-      isMatched: false
-    }));
-  }
+    // Move createCardObjects inside useEffect
+    function createCardObjects() {
+      const imageClasses = shuffleCardImageClasses();
+      return imageClasses.map((imgClass, idx) => ({
+        id: idx,
+        imageClass: imgClass,
+        isFlipped: false,
+        isMatched: false
+      }));
+    }
 
-  const initialCards = createCardObjects();
-  setCards(initialCards);
-}, []);  // Empty dependency array, only runs once
+    const initialCards = createCardObjects();
+    setCards(initialCards);
+  }, []);  // Empty dependency array, only runs once
 
    // Function to shuffle image classes
   function shuffleCardImageClasses() {
-    // Array of card images (replace these with your actual image classes)
+    // Array of card images
     const imageClasses = [
-      "image-1", "image-2", "image-3", "image-4", "image-5", "image-6",
-      "image-1", "image-2", "image-3", "image-4", "image-5", "image-6"
+      "words-antibiotic", "image-antibiotic", "words-black", "image-black", "words-christmas", "image-christmas",
+      "words-emergency", "image-emergency", "words-guinea", "image-guinea", "words-late", "image-late"
     ];
 
     // Shuffle the array
@@ -57,15 +57,17 @@ function Game() {
     setCards(updatedCards);
     const newFlippedPair = [...flippedPair, { ...clickedCard, isFlipped: true }];
     setFlippedPair(newFlippedPair);
-    setFlipCount((count) => count + 1);
+    
 
     if (newFlippedPair.length === 2) {
+      setFlipCount((count) => count + 1);
       const [first, second] = newFlippedPair;
-      if (first.imageClass === second.imageClass) {
+      // image classes are off the form "words *class*" or "image *class*"
+      if (first.imageClass.split('-')[1] === second.imageClass.split('-')[1]) {
         // Match!
         setTimeout(() => {
           const withMatches = updatedCards.map((c) =>
-            c.imageClass === first.imageClass ? { ...c, isMatched: true } : c
+            c.imageClass.split('-')[1] === first.imageClass.split('-')[1] ? { ...c, isMatched: true } : c
           );
           setCards(withMatches);
           setMatchCount((count) => {
@@ -94,7 +96,12 @@ function Game() {
       <h2>Matches: {matchCount}</h2>
       <div id="card-container">
         {cards.map((card) => (
-          <Card key={card.id} card={card} onClick={handleCardClick} />
+          <Card
+            key={card.id}
+            imageClass={card.imageClass}
+            isFlipped={card.isFlipped}
+            onClick={() => handleCardClick(card)}
+          />
         ))}
       </div>
     </div>

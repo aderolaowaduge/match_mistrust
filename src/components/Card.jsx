@@ -1,8 +1,8 @@
 import React from 'react';
 import './Card.css'; // Ensure your CSS is imported
 
-const Card = ({ imageId, isFlipped, onClick }) => {
-  const cardClass = `card image-${imageId} ${isFlipped ? 'flipped' : ''}`;
+const Card = ({ imageClass, isFlipped, onClick }) => {
+  const cardClass = `card ${imageClass} ${isFlipped ? 'flipped' : ''}`;
 
   return (
     <div className={cardClass} onClick={onClick}>

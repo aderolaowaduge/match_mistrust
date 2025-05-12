@@ -43,27 +43,50 @@
     transform: rotateY(0deg);
   }
   
-  .image-1 .card-up {
-    background-image: url(../assets/img/image-1.png), linear-gradient(#72dbf4, #72dbf4);
+  .image-antibiotic .card-up {
+    background-image: url(../assets/img/image-antibiotic.png), linear-gradient(#72dbf4, #72dbf4);
   }
   
-  .image-2 .card-up {
-    background-image: url(../assets/img/image-2.png), linear-gradient(#72dbf4, #72dbf4);
+  .image-black .card-up {
+    background-image: url(../assets/img/image-black.png), linear-gradient(#72dbf4, #72dbf4);
   }
   
-  .image-3 .card-up {
-    background-image: url(../assets/img/image-3.png), linear-gradient(#72dbf4, #72dbf4);
+    .image-christmas .card-up {
+    background-image: url(../assets/img/image-christmas.png), linear-gradient(#72dbf4, #72dbf4);
   }
   
-  .image-4 .card-up {
-    background-image: url(../assets/img/image-4.png), linear-gradient(#72dbf4, #72dbf4);
+  .image-emergency .card-up {
+    background-image: url(../assets/img/image-emergency.png), linear-gradient(#72dbf4, #72dbf4);
+  }
+
+  .image-guinea .card-up {
+    background-image: url(../assets/img/image-guinea.png), linear-gradient(#72dbf4, #72dbf4);
   }
   
-  .image-5 .card-up {
-    background-image: url(../assets/img/image-5.png), linear-gradient(#72dbf4, #72dbf4);
+  .image-late .card-up {
+    background-image: url(../assets/img/image-late.png), linear-gradient(#72dbf4, #72dbf4);
+  }
+
+  .words-antibiotic .card-up {
+    background-image: url(../assets/img/words-antibiotic.png), linear-gradient(#72dbf4, #72dbf4);
   }
   
-  .image-6 .card-up {
-    background-image: url(../assets/img/image-6.png), linear-gradient(#72dbf4, #72dbf4);
+  .words-black .card-up {
+    background-image: url(../assets/img/words-black.png), linear-gradient(#72dbf4, #72dbf4);
   }
   
+  .words-christmas .card-up {
+    background-image: url(../assets/img/words-christmas.png), linear-gradient(#72dbf4, #72dbf4);
+  }
+  
+  .words-emergency .card-up {
+    background-image: url(../assets/img/words-emergency.png), linear-gradient(#72dbf4, #72dbf4);
+  }
+
+  .words-guinea .card-up {
+    background-image: url(../assets/img/words-guinea.png), linear-gradient(#72dbf4, #72dbf4);
+  }
+  
+  .words-late .card-up {
+    background-image: url(../assets/img/words-late.png), linear-gradient(#72dbf4, #72dbf4);
+  }
