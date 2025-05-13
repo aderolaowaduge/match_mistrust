@@ -1,0 +1,51 @@
+
+  :global(#game-body) {
+    margin: 0;
+    background: url(../assets/img/background.png);
+    background-position: center;
+    background-size: cover;
+    color: #391b19;
+    font-family: "Kanit", sans-serif;
+    min-height: 100vh;
+  }
+  
+ :global(#game-body) h1 {
+    font-size: 60px;
+    text-align: center;
+    color: #391b19;
+    text-shadow: 2px 2px 3px #fff3e7;
+  }
+  
+  :global(#ui-container) {
+    text-align: center;
+  }
+  
+  :global(#ui-container) h3 {
+    margin: 0;
+    display: inline-block;
+    font-size: 40px;
+    text-align: center;
+    text-shadow: 2px 2px 3px #fff3e7;
+  }
+  
+  .btn-container {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .reset-btn {
+    margin: 0 0 30px 0;
+    padding: 20px 40px;
+    background-color: #5e5447;
+    color: white;
+    border: 0px;
+    border-radius: 10px;
+    font-family: "Kanit", sans-serif;
+    font-size: 1.5em;
+  }
+  
+  .reset-btn:hover {
+    cursor: pointer;
+    background-color: #534a3d;
+  }
+  

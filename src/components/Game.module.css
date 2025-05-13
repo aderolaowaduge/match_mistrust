@@ -1,0 +1,17 @@
+:root {
+    --card-width: 210px;
+    --card-height: 150px;
+  }
+  
+  .gameStats {
+    color: #140909;
+    font-family: "Kanit", sans-serif;
+  }
+
+  
+  :global(#card-container) {
+    font-size: 0;
+    margin: 10px auto;
+    width: calc((var(--card-width) + 2vw + 12px) * 4);
+  }
+  

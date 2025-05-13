@@ -1,9 +1,15 @@
 import React, { useState, useEffect } from "react";
+import styles from './Game.module.css';
 import Card from "./Card"
+import click from "../assets/audio/click.wav"
+import match from "../assets/audio/match.wav"
+import win from "../assets/audio/win.wav"
+//TODO add in globals for id
 
-let clickAudio = new Audio("../assets/audio/click.wav");
-let matchAudio = new Audio("../assets/audio/match.wav");
-let winAudio = new Audio("../assets/audio/win.wav");
+
+let clickAudio = new Audio(click);
+let matchAudio = new Audio(match);
+let winAudio = new Audio(win);
 
 function Game() {
   const totalMatchesNeeded = 6;
@@ -92,8 +98,8 @@ function Game() {
 
   return (
     <div>
-      <h2>Flips: {flipCount}</h2>
-      <h2>Matches: {matchCount}</h2>
+      <h2 className={styles.gameStats}>Flips: {flipCount}</h2>
+      <h2 className={styles.gameStats}>Matches: {matchCount}</h2>
       <div id="card-container">
         {cards.map((card) => (
           <Card

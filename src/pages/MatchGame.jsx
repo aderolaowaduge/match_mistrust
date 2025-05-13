@@ -1,10 +1,12 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import Game from '../components/Game';
-import './MatchGame.css';
+import styles from './MatchGame.module.css';
 
 function MatchGame() {
   const [gameStarted, setGameStarted] = useState(false);
   const [gameKey, setGameKey] = useState(0); // Used to force re-mount Game
+
+
 
   const handleStartOrReset = () => {
     if (gameStarted) {
@@ -15,7 +17,7 @@ function MatchGame() {
   };
 
   return (
-    <div>
+    <div id="game-body" class={styles.overlay}>
       {/* Header Section */}
       <header>
         <h1>Match of Mistrust</h1>
@@ -34,8 +36,8 @@ function MatchGame() {
       </section>
 
       {/* Reset/Start Button */}
-      <div className="btn-container">
-        <button className="reset-btn" onClick={handleStartOrReset}>
+      <div className={styles["btn-container"]}>
+        <button className={styles["reset-btn"]} onClick={handleStartOrReset}>
           {gameStarted ? "Reset Game" : "Start Game"}
         </button>
       </div>
