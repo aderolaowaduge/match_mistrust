@@ -1,10 +1,11 @@
-:global(#home-body) {
-  background-color: aqua;
+#home-body {
+  background-color: rgb(206, 206, 206);
+  margin-top:50px;
 }
 
 /* === HERO SECTION === */
-.hero {
-  height: 80vh;
+.hero-image {
+  height: 100vh;
   background-image: url('../assets/img/main-hero.png');
   background-attachment: fixed;
   background-position: top;
@@ -12,20 +13,17 @@
   position: relative;
 }
 
-.overlay {
-  background-color: rgba(0, 0, 0, 0.5); /* translucent dark overlay */
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.hero-image::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5); /* translucent overlay */
+  z-index: 1;
 }
 
-.hero-title {
-  color: white;
-  font-size: 3rem;
-  text-align: center;
-  font-weight: bold;
-  padding: 0 1rem;
+.hero-image .container {
+  position: relative;
+  z-index: 2;
 }
 
 /* === OVERVIEW SECTION === */

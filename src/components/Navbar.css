@@ -1,0 +1,15 @@
+/* src/components/Navbar.css */
+
+#navbar-top {
+  background-color: #000769;
+  height: 20px;
+}
+
+.navbar-custom {
+  border-top: 20px solid #0c152b; /* Dark border on top */
+  color:#2d1913;
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
